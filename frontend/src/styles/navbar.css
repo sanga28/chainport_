@@ -1,0 +1,127 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(2, 6, 23, 0.92);
+  padding: 14px 35px;
+  border-bottom: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-family: "Audiowide", sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+  color: #38bdf8;
+  text-shadow: 0 0 12px rgba(56,189,248,0.9);
+}
+
+
+/* CENTER */
+.nav-center {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-item {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-item.active {
+  color: #38bdf8;
+}
+
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #38bdf8;
+  left: 0;
+  bottom: -6px;
+}
+
+/* RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Wallet status */
+.wallet-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 14px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid #38bdf8;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #22c55e;
+}
+
+/* USER MENU */
+.user-menu {
+  position: relative;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+/* Dropdown – NOTE: display:flex (NOT none) */
+.dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  z-index: 200;
+}
+
+.dropdown p {
+  padding: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+
+.dropdown p:hover {
+  background: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+  border-radius: 6px;
+}
