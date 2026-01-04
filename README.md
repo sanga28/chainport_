@@ -28,34 +28,15 @@ This creates a trustless, auditable, and decentralized DevOps model.
 - Marketplace to browse and validate registered containers
 - Local blockchain development and testing environment
 
-## Tracks Used in This Project
-- Auth0 Track – Authentication & Identity
-Auth0 is used to provide secure authentication and identity management for developers accessing the ChainPort dashboard.
-It enables controlled access, user identity verification, and seamless integration with Web3 wallets, ensuring that only authenticated users can register and manage containers.
-- InForge Track – Blockchain Infrastructure & Development
-InForge is used as the blockchain infrastructure and developer tooling layer for deploying, interacting with, and testing smart contracts.
-It enables reliable access to blockchain networks, simplifies contract deployment workflows, and supports scalable Web3 application development.
-- Cloudflare Track – Infrastructure, Security, and Performance
-Cloudflare is used to enhance application performance and security through optimized DNS management, request routing, and protection against common web threats.
-It helps ensure availability and reliability of the frontend and backend services.
-- Requestly Track – API Testing & Debugging
-Requestly is used during development to intercept, inspect, and mock API requests.
-This enables efficient debugging of frontend-backend interactions and blockchain API calls, accelerating development and testing workflows.
-- Gemini Track – AI-Assisted Development & Validation
-Gemini is leveraged for AI-assisted analysis, documentation support, and validation of project logic and workflows.
-It supports faster iteration, clearer reasoning, and improved reliability during development.
-
 ## Architecture & Tech Stack
 Frontend
 - React
 - Ethers.js
 - MetaMask
-- Auth0
 
 Blockchain
 - Solidity
 - Hardhat
-- InForge
 
 Storage
 - IPFS
@@ -66,9 +47,6 @@ Backend
 - Express.js
 - REST APIs
 
-Infrastructure & Tooling
-- Cloudflare
-- Requestly
 ## Repository Structure
 ChainPort/
 ├── frontend/        # Web3 dashboard and user interface
