@@ -28,6 +28,48 @@ This creates a trustless, auditable, and decentralized DevOps model.
 - Marketplace to browse and validate registered containers
 - Local blockchain development and testing environment
 
+## Secure Frontend–Backend Architecture
+
+ChainPort follows a strict separation of concerns to ensure that no sensitive credentials are exposed to users.
+### Frontend (Public Layer)
+- Acts only as a user interface
+- Communicates with backend via HTTPS APIs
+- Contains no private keys or secrets
+Allowed frontend configuration:
+- Backend API URLs
+- Public contract addresses
+Disallowed:
+- API keys
+- Private keys
+- IPFS credentials
+- Sandbox or execution tokens
+### Backend (Secure Authority Layer)
+- Holds all sensitive credentials in environment variables (.env)
+- Performs validation, authentication, and access control
+- Interacts with third-party services on behalf of the frontend
+
+Example backend secrets:
+- IPFS / Pinata API keys
+- Blockchain admin or service keys
+- Sandbox execution credentials
+
+These secrets are:
+- Never exposed to the frontend
+- Never committed to version control
+### Third-Party Services (Execution & Storage)
+- IPFS / Pinata for immutable metadata storage
+- Sandbox environment for secure container execution
+- Blockchain RPC providers for on-chain operations
+
+The frontend never interacts directly with these services.
+### Security Model
+- On-chain ownership verification using wallet identity
+- Immutable metadata prevents tampering or overwriting
+- Version lineage ensures full traceability of changes
+- Sandboxed execution isolates untrusted containers
+- Behavior-based trust scoring detects risky activity
+- Deployment decisions enforced by trust level
+
 ## Architecture & Tech Stack
 Frontend
 - React
