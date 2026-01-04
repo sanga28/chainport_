@@ -31,6 +31,8 @@ This creates a trustless, auditable, and decentralized DevOps model.
 ## Secure Frontend–Backend Architecture
 
 ChainPort follows a strict separation of concerns to ensure that no sensitive credentials are exposed to users.
+In simple terms, users see only the interface, while all sensitive logic and secrets are handled securely on the backend.
+
 ### Frontend (Public Layer)
 - Acts only as a user interface
 - Communicates with backend via HTTPS APIs
@@ -69,6 +71,8 @@ The frontend never interacts directly with these services.
 - Sandboxed execution isolates untrusted containers
 - Behavior-based trust scoring detects risky activity
 - Deployment decisions enforced by trust level
+
+### 
 
 ## Architecture & Tech Stack
 Frontend
@@ -112,3 +116,5 @@ ChainPort/
 ChainPort demonstrates how DevOps workflows can be re-architected using decentralized technologies.
 By introducing immutable records, cryptographic ownership, and transparent verification, it enables a more secure and trust-independent software supply chain.
 
+## In One Sentence
+ChainPort ensures that software containers can be owned, verified, and deployed safely by proving who created them, how they changed, and whether they can be trusted to run.
